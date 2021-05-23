@@ -2,7 +2,7 @@
 本プラグインはoigami様のMMDPluginを前提プラグインとしています。<br />
 RPCの表示切替をつくりたかったんですが現状C++の経験が少なく、2,3日間もかけたのにできなかったので諦めました。(もしかしたら追加するかもしれません。)
 ## 導入方法
-Releaseから最新のMMDDiscordRPCをダウンロードして解凍しましょう。
+[Release](https://github.com/PTOM76/MMDDiscordRPC/releases)から最新のMMDDiscordRPCをダウンロードして解凍しましょう。
 <br />
 下記のURLからMMDPluginをダウンロードしてインストールしてください。
 ---
