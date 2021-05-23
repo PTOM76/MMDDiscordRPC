@@ -1,0 +1,15 @@
+﻿  mmd_discordsrc.cpp
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(45,73): warning C4100: 'dwTime': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(45,57): warning C4100: 'timer_id': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(45,42): warning C4100: 'uMsg': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(45,31): warning C4100: 'hWnd': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(80,14): warning C4189: 'timer': ローカル変数が初期化されましたが、参照されていません
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(107,82): warning C4100: 'lParam': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(107,67): warning C4100: 'wParam': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(107,54): warning C4100: 'uMsg': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(107,43): warning C4100: 'hwnd': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\mmd_discordsrc.cpp(123,42): warning C4100: 'device': 引数は関数の本体部で 1 度も参照されません。
+  MMDUtility.vcxproj -> D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.dll
+  指定されたファイルが見つかりません。
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(155,5): error MSB3073: コマンド "copy D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.lib D:\Users\ptms7\source\repos\TestPlugin\MMDUtility\MMDDiscordRPC.lib
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(155,5): error MSB3073: :VCEnd" はコード 1 で終了しました。

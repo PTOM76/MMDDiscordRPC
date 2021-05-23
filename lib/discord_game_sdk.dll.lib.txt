@@ -1,0 +1,2 @@
+このファイルにdiscord_game_sdk.dll.libを入れてください。
+https://discord.com/developers/docs/game-sdk/sdk-starter-guide
