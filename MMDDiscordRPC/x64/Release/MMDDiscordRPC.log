@@ -1,0 +1,32 @@
+﻿  achievement_manager.cpp
+  activity_manager.cpp
+  application_manager.cpp
+  core.cpp
+  image_manager.cpp
+  lobby_manager.cpp
+  network_manager.cpp
+  overlay_manager.cpp
+  relationship_manager.cpp
+  storage_manager.cpp
+  store_manager.cpp
+  types.cpp
+  user_manager.cpp
+  voice_manager.cpp
+  mmd_discordrpc.cpp
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(19,77): warning C4100: 'lpReserved': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(19,50): warning C4100: 'ul_reason_for_call': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,73): warning C4100: 'dwTime': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,57): warning C4100: 'timer_id': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,42): warning C4100: 'uMsg': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,31): warning C4100: 'hWnd': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(166,14): warning C4189: 'timer': ローカル変数が初期化されましたが、参照されていません
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(179,42): warning C4100: 'device': 引数は関数の本体部で 1 度も参照されません。
+     ライブラリ D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.lib とオブジェクト D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.exp を作成中
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 1233 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  MMDDiscordRPC.vcxproj -> D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.dll
+  指定されたファイルが見つかりません。
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(155,5): error MSB3073: コマンド "copy D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.lib D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(155,5): error MSB3073: :VCEnd" はコード 1 で終了しました。
