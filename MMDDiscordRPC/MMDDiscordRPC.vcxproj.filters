@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="targetver.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="mmdplugin\mmd_plugin.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -72,18 +69,12 @@
     <ClInclude Include="discordsdk\voice_manager.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="mmd_discordsrc.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\ptms7\picture\CInifile.h">
+    <ClInclude Include="mmd_discordrpc.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="mmd_discordsrc.cpp">
+    <ClCompile Include="mmd_discordrpc.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="discordsdk\achievement_manager.cpp">

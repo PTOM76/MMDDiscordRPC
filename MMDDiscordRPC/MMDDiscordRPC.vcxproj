@@ -183,7 +183,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\ptms7\picture\CInifile.h" />
     <ClInclude Include="discordsdk\achievement_manager.h" />
     <ClInclude Include="discordsdk\activity_manager.h" />
     <ClInclude Include="discordsdk\application_manager.h" />
@@ -202,8 +201,7 @@
     <ClInclude Include="discordsdk\user_manager.h" />
     <ClInclude Include="discordsdk\voice_manager.h" />
     <ClInclude Include="mmdplugin\mmd_plugin.h" />
-    <ClInclude Include="mmd_discordsrc.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="mmd_discordrpc.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="discordsdk\achievement_manager.cpp" />
@@ -220,21 +218,7 @@
     <ClCompile Include="discordsdk\types.cpp" />
     <ClCompile Include="discordsdk\user_manager.cpp" />
     <ClCompile Include="discordsdk\voice_manager.cpp" />
-    <ClCompile Include="dllmain.cpp">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="mmd_discordsrc.cpp" />
+    <ClCompile Include="mmd_discordrpc.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

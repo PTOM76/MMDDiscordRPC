@@ -1,5 +1,6 @@
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\vc142.pdb
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\vc142.idb
+d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmd_discordsrc.obj
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\voice_manager.obj
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\user_manager.obj
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\types.obj
@@ -15,23 +16,51 @@ d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\application_manager.
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\activity_manager.obj
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\achievement_manager.obj
 d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\dllmain.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\vc142.pdb
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\vc142.idb
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\mmd_discordsrc.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\voice_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\user_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\types.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\store_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\storage_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\relationship_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\overlay_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\network_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\lobby_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\image_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\core.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\application_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\activity_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\achievement_manager.obj
+d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\dllmain.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\vc142.pdb
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\vc142.idb
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\voice_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\user_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\types.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\store_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\storage_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\relationship_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\overlay_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\network_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\lobby_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\image_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\core.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\application_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\activity_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\achievement_manager.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmd_discordrpc.obj
+d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.ilk
+d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.dll
+d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.pdb
 d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.lib
 d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.exp
-d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.pdb
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\cl.command.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\cl.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\cl.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link-cvtres.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link-cvtres.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link-rc.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link-rc.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.14244-cvtres.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.14244-cvtres.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.14244-rc.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.14244-rc.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.14244.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.14244.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.command.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.read.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\link.write.1.tlog
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmddiscordrpc.tlog\mmddiscordrpc.write.1u.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmd_discordsrc.obj
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\cl.command.1.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\cl.read.1.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\cl.write.1.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\link.command.1.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\link.read.1.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\link.write.1.tlog
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\mmddiscordrpc.write.1u.tlog
