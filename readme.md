@@ -1,4 +1,6 @@
 # MMDDiscordRPC
+![mmddiscordrpc](https://user-images.githubusercontent.com/58260965/120056607-533c4780-c078-11eb-83df-feaf834edbac.png)
+
 本プラグインはoigami様のMMDPluginを前提プラグインとしています。<br />
 現状、64Bitのみ対応しています。<br />
 <s>RPCの表示切替をつくりたかったんですが現状C++の経験が少なく、2,3日間もかけたのにできなかったので諦めました。(もしかしたら追加するかもしれません。)</s><br />
