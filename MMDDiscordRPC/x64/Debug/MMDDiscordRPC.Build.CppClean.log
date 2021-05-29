@@ -1,41 +1,6 @@
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\vc142.pdb
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\vc142.idb
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\mmd_discordsrc.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\voice_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\user_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\types.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\store_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\storage_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\relationship_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\overlay_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\network_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\lobby_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\image_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\core.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\application_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\activity_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\achievement_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmdutility\x64\debug\dllmain.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\vc142.pdb
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\vc142.idb
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\mmd_discordsrc.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\voice_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\user_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\types.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\store_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\storage_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\relationship_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\overlay_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\network_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\lobby_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\image_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\core.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\application_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\activity_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\achievement_manager.obj
-d:\users\ptms7\source\repos\testplugin\mmddiscordrpc\x64\debug\dllmain.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\vc142.pdb
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\vc142.idb
+d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmd_discordrpc.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\voice_manager.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\user_manager.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\types.obj
@@ -50,13 +15,11 @@ d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\core.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\application_manager.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\activity_manager.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\achievement_manager.obj
-d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmd_discordrpc.obj
-d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.ilk
 d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.dll
+d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.ilk
 d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.pdb
 d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.lib
 d:\program files\mikumikudance_v932x64\debug\plugin\mmddiscordrpc\mmddiscordrpc.exp
-d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmd_discordsrc.obj
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\cl.command.1.tlog
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\cl.read.1.tlog
 d:\users\ptms7\source\repos\mmddiscordrpc\mmddiscordrpc\x64\debug\mmddiscordrpc.tlog\cl.write.1.tlog

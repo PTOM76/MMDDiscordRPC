@@ -1,12 +1,14 @@
 ﻿  mmd_discordrpc.cpp
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(19,77): warning C4100: 'lpReserved': 引数は関数の本体部で 1 度も参照されません。
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(19,50): warning C4100: 'ul_reason_for_call': 引数は関数の本体部で 1 度も参照されません。
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,73): warning C4100: 'dwTime': 引数は関数の本体部で 1 度も参照されません。
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,57): warning C4100: 'timer_id': 引数は関数の本体部で 1 度も参照されません。
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,42): warning C4100: 'uMsg': 引数は関数の本体部で 1 度も参照されません。
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(62,31): warning C4100: 'hWnd': 引数は関数の本体部で 1 度も参照されません。
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(166,14): warning C4189: 'timer': ローカル変数が初期化されましたが、参照されていません
-D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(179,42): warning C4100: 'device': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(29,77): warning C4100: 'lpReserved': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(29,50): warning C4100: 'ul_reason_for_call': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(78,90): warning C4100: 'result': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(81,90): warning C4100: 'result': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(70,73): warning C4100: 'dwTime': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(70,57): warning C4100: 'timer_id': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(70,42): warning C4100: 'uMsg': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(70,31): warning C4100: 'hWnd': 引数は関数の本体部で 1 度も参照されません。
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(227,14): warning C4189: 'timer': ローカル変数が初期化されましたが、参照されていません
+D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\mmd_discordrpc.cpp(240,42): warning C4100: 'device': 引数は関数の本体部で 1 度も参照されません。
   MMDDiscordRPC.vcxproj -> D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.dll
   指定されたファイルが見つかりません。
 D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(155,5): error MSB3073: コマンド "copy D:\Program Files\MikuMikuDance_v932x64\debug\Plugin\MMDDiscordRPC\MMDDiscordRPC.lib D:\Users\ptms7\source\repos\MMDDiscordRPC\MMDDiscordRPC\MMDDiscordRPC.lib
