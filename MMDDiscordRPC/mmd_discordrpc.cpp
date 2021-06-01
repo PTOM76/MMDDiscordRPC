@@ -1,20 +1,20 @@
 ﻿#include "mmd_discordrpc.h"
 #ifdef NDEBUG
 #define printf(...) (void)0
-#endif // !NDEBUG
+#endif  // !NDEBUG
 
 using namespace mmp;
 using namespace std;
 
-#define DiscordRPCMenu 15001
-#define SwitchMenu 15002
-#define SettingMenu 15003
-#define SettingMenu_Title 15004
-#define Separator 15008
-#define AboutMenu 15009
+UINT DiscordRPCMenu = createWM_APP_ID();
+UINT SwitchMenu = createWM_APP_ID();
+UINT SettingMenu = createWM_APP_ID();
+UINT SettingMenu_Title = createWM_APP_ID();
+UINT Separator = createWM_APP_ID();
+UINT AboutMenu = createWM_APP_ID();
 
 auto started_time = std::chrono::system_clock::now();
-bool rpcIsTrue;
+bool RPCEnable;
 bool stateWindowTitleBool;
 LONG_PTR originWndProc = NULL;
 #ifdef _WIN64
@@ -26,8 +26,8 @@ LONG_PTR originWndProc = NULL;
 HANDLE hModule;
 TCHAR iniPath[MAX_PATH + 1];
 
-BOOL APIENTRY DllMain(HANDLE hModuleFunc, DWORD  ul_reason_for_call, LPVOID lpReserved)
-{
+BOOL APIENTRY DllMain(HANDLE hModuleFunc, DWORD ul_reason_for_call,
+    LPVOID lpReserved) {
     hModule = hModuleFunc;
     return TRUE;
 }
@@ -36,108 +36,126 @@ BOOL APIENTRY DllMain(HANDLE hModuleFunc, DWORD  ul_reason_for_call, LPVOID lpRe
 
 const discord::ClientId client_id = 845620756078919700;
 
-discord::Core* core{};
-discord::Activity activity{};
+discord::Core* discordCore{};
+discord::Activity discordActivity{};
 static LPSTR SYS_INFO_STR = NULL;
 
 BOOL settingDiscordRPC() {
-    discord::Core::Create(client_id, DiscordCreateFlags_NoRequireDiscord, &core);
-    if (!core) {
-        auto hwnd = getHWND();
-        MessageBox(hwnd, L"Discordを起動していない可能性があるため、有効にできませんでした。", L"MMDDiscordRPC", MB_OK);
-        CheckMenuItem(GetMenu(hwnd), SwitchMenu, MF_BYCOMMAND | MFS_UNCHECKED);
-        rpcIsTrue = false;
+    discord::Core::Create(client_id, DiscordCreateFlags_NoRequireDiscord,
+        &discordCore);
+    if (!discordCore) {
+        HWND hWnd = getHWND();
+        MessageBox(
+            hWnd,
+            L"Discordを起動していない可能性があるため、有効にできませんでした。",
+            L"MMDDiscordRPC", MB_OK);
+        CheckMenuItem(GetMenu(hWnd), SwitchMenu, MF_BYCOMMAND | MFS_UNCHECKED);
+        RPCEnable = false;
+        delete discordCore;
+        return false;
     }
     else {
-        activity.GetAssets().SetLargeImage("mmd_icon");
-        activity.GetAssets().SetLargeText(SYS_INFO_STR == NULL ? "MikuMikuDance" : SYS_INFO_STR);
-        activity.SetState(u8"編集中");
-        activity.GetAssets().SetSmallText(u8"編集中");
-        activity.GetTimestamps().SetStart(std::chrono::duration_cast<std::chrono::seconds>(started_time.time_since_epoch()).count());
-        activity.SetType(discord::ActivityType::Playing);
-        core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {
-            if (result == discord::Result::Ok) {
-                // MessageBox(getHWND(), L"有効になりました。", L"MMDDiscordRPC", MB_OK);
-            }
-            else {
-                // MessageBox(getHWND(), L"有効にできませんでした。", L"MMDDiscordRPC", MB_OK);
-            }
+        discordActivity.GetAssets().SetLargeImage("mmd_icon");
+        discordActivity.GetAssets().SetLargeText(
+            SYS_INFO_STR == NULL ? "MikuMikuDance" : SYS_INFO_STR);
+        discordActivity.SetState(u8"編集中");
+        discordActivity.GetAssets().SetSmallText(u8"編集中");
+        discordActivity.GetTimestamps().SetStart(
+            std::chrono::duration_cast<std::chrono::seconds>(
+                started_time.time_since_epoch())
+            .count());
+        discordActivity.SetType(discord::ActivityType::Playing);
+        discordCore->ActivityManager().UpdateActivity(
+            discordActivity, [](discord::Result result) {
+                if (result == discord::Result::Ok) {
+                    // MessageBox(getHWND(), L"有効になりました。", L"MMDDiscordRPC",
+                    // MB_OK);
+                }
+                else {
+                    // MessageBox(getHWND(), L"有効にできませんでした。",
+                    // L"MMDDiscordRPC", MB_OK);
+                }
             });
     }
     return true;
 }
 
-void __stdcall timerTick(HWND hWnd, UINT uMsg, UINT_PTR timer_id, DWORD dwTime) {
-    if (rpcIsTrue) {
-        //size_t i;
+void __stdcall timerTick(HWND hWnd, UINT uMsg, UINT_PTR timer_id,
+    DWORD dwTime) {
+    if (RPCEnable) {
+        // size_t i;
         if (stateWindowTitleBool) {
             char title[512];
             GetWindowTextA(getHWND(), title, sizeof(title));
-            activity.GetAssets().SetSmallText(title);
-            activity.SetState(title);
-            core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {});
-        } else {
-            activity.SetState(u8"編集中");
-            core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {});
+            discordActivity.GetAssets().SetSmallText(title);
+            discordActivity.SetState(title);
+            discordCore->ActivityManager().UpdateActivity(
+                discordActivity, [](discord::Result result) {});
         }
-        core->RunCallbacks();
+        else {
+            discordActivity.SetState(u8"編集中");
+            discordCore->ActivityManager().UpdateActivity(
+                discordActivity, [](discord::Result result) {});
+        }
+        discordCore->RunCallbacks();
     }
 }
 // -discord
 
-static LRESULT CALLBACK pluginWndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
-{
-    switch (msg)
-    {
-    case WM_COMMAND:
-        switch (LOWORD(wp)) {
-        case SwitchMenu:
-        {
-            auto menu = GetMenu(hWnd);
-            UINT state = GetMenuState(menu, SwitchMenu, MF_BYCOMMAND);
-            if (state & MFS_CHECKED) {
-                CheckMenuItem(menu, SwitchMenu, MF_BYCOMMAND | MFS_UNCHECKED);
-                rpcIsTrue = false;
-                WritePrivateProfileString(L"settings", L"switch", L"disable", iniPath);
-                delete core;
+static LRESULT CALLBACK pluginWndProc(HWND hWnd, UINT msg, WPARAM wp,
+    LPARAM lp) {
+    switch (msg) {
+        case WM_COMMAND: {
+            WORD menuId = LOWORD(wp);
+            if (menuId == (WORD)SwitchMenu) {
+                auto menu = GetMenu(hWnd);
+                UINT state = GetMenuState(menu, SwitchMenu, MF_BYCOMMAND);
+                if (state & MFS_CHECKED) {
+                    CheckMenuItem(menu, SwitchMenu, MF_BYCOMMAND | MFS_UNCHECKED);
+                    RPCEnable = false;
+                    WritePrivateProfileString(L"settings", L"switch", L"disable",
+                        iniPath);
+                    delete discordCore;
+                }
+                else {
+                    CheckMenuItem(menu, SwitchMenu, MF_BYCOMMAND | MFS_CHECKED);
+                    RPCEnable = true;
+                    WritePrivateProfileString(L"settings", L"switch", L"enable", iniPath);
+                    settingDiscordRPC();
+                }
+                break;
             }
-            else {
-                CheckMenuItem(menu, SwitchMenu, MF_BYCOMMAND | MFS_CHECKED);
-                rpcIsTrue = true;
-                WritePrivateProfileString(L"settings", L"switch", L"enable", iniPath);
-                settingDiscordRPC();
+            else if (menuId == (WORD)SettingMenu_Title) {
+                auto menu = GetMenu(hWnd);
+                UINT state = GetMenuState(menu, SettingMenu_Title, MF_BYCOMMAND);
+                if (state & MFS_CHECKED) {
+                    CheckMenuItem(menu, SettingMenu_Title, MF_BYCOMMAND | MFS_UNCHECKED);
+                    stateWindowTitleBool = false;
+                    WritePrivateProfileString(L"settings", L"stateWindowTitle", L"false",
+                        iniPath);
+                }
+                else {
+                    CheckMenuItem(menu, SettingMenu_Title, MF_BYCOMMAND | MFS_CHECKED);
+                    stateWindowTitleBool = true;
+                    WritePrivateProfileString(L"settings", L"stateWindowTitle", L"true",
+                        iniPath);
+                }
+                break;
             }
+            else if (menuId == (WORD)AboutMenu) {
+                MessageBox(hWnd, L"MMDDiscordRPC v0.4\nby Pitan",
+                    L"MMDDiscordRPCについて", MB_OK);
+                break;
+            }
+        }
+        default:
             break;
-        }
-        case SettingMenu_Title: {
-            auto menu = GetMenu(hWnd);
-            UINT state = GetMenuState(menu, SettingMenu_Title, MF_BYCOMMAND);
-            if (state & MFS_CHECKED) {
-                CheckMenuItem(menu, SettingMenu_Title, MF_BYCOMMAND | MFS_UNCHECKED);
-                stateWindowTitleBool = false;
-                WritePrivateProfileString(L"settings", L"stateWindowTitle", L"false", iniPath);
-            }
-            else {
-                CheckMenuItem(menu, SettingMenu_Title, MF_BYCOMMAND | MFS_CHECKED);
-                stateWindowTitleBool = true;
-                WritePrivateProfileString(L"settings", L"stateWindowTitle", L"true", iniPath);
-            }
-            break;
-        }
-        case AboutMenu: {
-            MessageBox(hWnd, L"MMDDiscordRPC v0.3\nby Pitan", L"MMDDiscordRPCについて", MB_OK);
-            break;
-        }
-        }
-    default:
-        break;
     }
     return CallWindowProc((WNDPROC)originWndProc, hWnd, msg, wp, lp);
 };
 
-void MMDDiscordRPCInit()
-{
-    rpcIsTrue = true;
+void MMDDiscordRPCInit() {
+    RPCEnable = true;
     stateWindowTitleBool = true;
     TCHAR dllPath[MAX_PATH + 1];
     TCHAR pszDrive[_MAX_DRIVE];
@@ -145,22 +163,26 @@ void MMDDiscordRPCInit()
     TCHAR pszFile[_MAX_FNAME];
     TCHAR pszExtent[_MAX_EXT];
     GetModuleFileName((HMODULE)hModule, dllPath, MAX_PATH);
-    _tsplitpath_s(dllPath, pszDrive, _MAX_DRIVE, pszFolder, _MAX_DIR, pszFile, _MAX_FNAME, pszExtent, _MAX_EXT);
+    _tsplitpath_s(dllPath, pszDrive, _MAX_DRIVE, pszFolder, _MAX_DIR, pszFile,
+        _MAX_FNAME, pszExtent, _MAX_EXT);
     _tmakepath_s(iniPath, MAX_PATH, pszDrive, pszFolder, L"config", L"ini");
     if (!PathFileExists(iniPath)) {
         WritePrivateProfileString(L"settings", L"switch", L"enable", iniPath);
-        WritePrivateProfileString(L"settings", L"stateWindowTitle", L"true", iniPath);
+        WritePrivateProfileString(L"settings", L"stateWindowTitle", L"true",
+            iniPath);
     }
     else {
         TCHAR settings_switch[256];
         TCHAR stateWindowTitle[256];
-        GetPrivateProfileString(L"settings", L"switch", L"enable", settings_switch, 256, iniPath);
-        GetPrivateProfileString(L"settings", L"stateWindowTitle", L"true", stateWindowTitle, 256, iniPath);
+        GetPrivateProfileString(L"settings", L"switch", L"enable", settings_switch,
+            256, iniPath);
+        GetPrivateProfileString(L"settings", L"stateWindowTitle", L"true",
+            stateWindowTitle, 256, iniPath);
         if (_tcscmp(settings_switch, L"enable") == 0) {
-            rpcIsTrue = true;
+            RPCEnable = true;
         }
         else {
-            rpcIsTrue = false;
+            RPCEnable = false;
         }
         if (_tcscmp(stateWindowTitle, L"true") == 0) {
             stateWindowTitleBool = true;
@@ -169,8 +191,8 @@ void MMDDiscordRPCInit()
             stateWindowTitleBool = false;
         }
     }
-    auto hwnd = getHWND();
-    auto menu = GetMenu(hwnd);
+    HWND hWnd = getHWND();
+    HMENU hMenu = GetMenu(hWnd);
     HMENU SubMenu = CreatePopupMenu();
     HMENU SettingSubMenu = CreatePopupMenu();
 
@@ -181,7 +203,7 @@ void MMDDiscordRPCInit()
     mii.wID = DiscordRPCMenu;
     mii.hSubMenu = SubMenu;
     mii.dwTypeData = L"DiscordRPC";
-    InsertMenuItemW(menu, mii.wID, FALSE, &mii);
+    InsertMenuItemW(hMenu, mii.wID, FALSE, &mii);
 
     mii.fMask = MIIM_ID | MIIM_TYPE;
     mii.fType = MFT_STRING;
@@ -214,37 +236,40 @@ void MMDDiscordRPCInit()
     mii.dwTypeData = L"MMDDiscordRPCについて";
     InsertMenuItemW(SubMenu, mii.wID, FALSE, &mii);
 
-    DrawMenuBar(hwnd);
+    DrawMenuBar(hWnd);
 
-    if (rpcIsTrue) {
-        CheckMenuItem(menu, SwitchMenu, MF_BYCOMMAND | MFS_CHECKED);
-    } else {
-        CheckMenuItem(menu, SwitchMenu, MF_BYCOMMAND | MFS_UNCHECKED);
+    if (RPCEnable) {
+        CheckMenuItem(hMenu, SwitchMenu, MF_BYCOMMAND | MFS_CHECKED);
+    }
+    else {
+        CheckMenuItem(hMenu, SwitchMenu, MF_BYCOMMAND | MFS_UNCHECKED);
     }
 
     if (stateWindowTitleBool) {
-        CheckMenuItem(menu, SettingMenu_Title, MF_BYCOMMAND | MFS_CHECKED);
-    } else {
-        CheckMenuItem(menu, SettingMenu_Title, MF_BYCOMMAND | MFS_UNCHECKED);
+        CheckMenuItem(hMenu, SettingMenu_Title, MF_BYCOMMAND | MFS_CHECKED);
+    }
+    else {
+        CheckMenuItem(hMenu, SettingMenu_Title, MF_BYCOMMAND | MFS_UNCHECKED);
     }
 
     settingDiscordRPC();
-    UINT_PTR timer = SetTimer(
-        NULL,
-        NULL,
-        500,
-        timerTick
-    );
+    UINT_PTR timer = SetTimer(NULL, NULL, 500, timerTick);
 
-    originWndProc = GetWindowLongPtr(hwnd, GWLP_WNDPROC);
-    SetWindowLongPtr(hwnd, GWLP_WNDPROC, (_LONG_PTR)pluginWndProc);
+    originWndProc = GetWindowLongPtr(hWnd, GWLP_WNDPROC);
+    SetWindowLongPtr(hWnd, GWLP_WNDPROC, (_LONG_PTR)pluginWndProc);
 }
 
-int version() { return 3; }
+class mmd_discordrpc : public MMDPluginDLL1 {
+    HMODULE classModule;
 
-MMDPluginDLL3* create3(IDirect3DDevice9* device)
-{
-    MMDDiscordRPCInit();
-    return nullptr;
+    public:
+        mmd_discordrpc() : classModule((HMODULE)hModule) { MMDDiscordRPCInit(); }
+};
+
+MMD_PLUGIN_API int version() { return 1; }
+
+MMD_PLUGIN_API MMDPluginDLL1* create1(IDirect3DDevice9* device) {
+    return new mmd_discordrpc;
 }
 
+MMD_PLUGIN_API void destroy1(MMDPluginDLL1* p) { delete p; }
