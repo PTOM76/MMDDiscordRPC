@@ -6,9 +6,11 @@
 
 ## 導入方法
 
+
 [Release](https://github.com/PTOM76/MMDDiscordRPC/releases)から最新のMMDDiscordRPCをダウンロードして解凍しましょう。
 <br />
 下記のURLからMMDPluginをダウンロードしてインストールしてください。
+
 
 ---
 
