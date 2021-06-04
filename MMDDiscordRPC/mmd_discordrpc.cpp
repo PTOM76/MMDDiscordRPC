@@ -1,7 +1,4 @@
 ﻿#include "mmd_discordrpc.h"
-#ifdef NDEBUG
-#define printf(...) (void)0
-#endif  // !NDEBUG
 
 using namespace mmp;
 using namespace std;
