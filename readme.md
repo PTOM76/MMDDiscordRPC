@@ -27,5 +27,6 @@ MMDPluginをインストールしたら、MikuMikuDance.exeの入っているフ
 Pluginフォルダの中にMMDDiscordRPCというフォルダを作成し、その中に解凍したフォルダの中身(discord_game_sdk.dll,MMDDiscordRPC.dll)を入れてください。
 ### MMDDiscordRPCを入れている上での注意
 - MMDを起動する前にDiscordを起動してください。(RPCが更新されないと思います。)
+- Discordへ反映されるのに少しズレがあると思われます。
 ## ライセンス
 ### MIT
