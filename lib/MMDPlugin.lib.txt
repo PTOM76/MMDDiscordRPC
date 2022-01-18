@@ -1,0 +1,2 @@
+このファイルにMMDPlugin.libを入れてください。
+https://bowlroll.net/file/135503
