@@ -1,4 +1,6 @@
 # MMDDiscordRPC
+[![Github All Releases](https://img.shields.io/github/downloads/PTOM76/MMDDiscordRPC/total.svg)]()
+
 ![mmddiscordrpc](https://user-images.githubusercontent.com/58260965/120056607-533c4780-c078-11eb-83df-feaf834edbac.png)
 
 本プラグインはoigami様のMMDPluginを前提プラグインとしています。<br />
