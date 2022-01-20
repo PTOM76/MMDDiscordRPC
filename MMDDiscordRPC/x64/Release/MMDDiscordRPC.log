@@ -1,0 +1,23 @@
+﻿  stdafx.cpp
+  achievement_manager.cpp
+  activity_manager.cpp
+  application_manager.cpp
+  core.cpp
+  image_manager.cpp
+  lobby_manager.cpp
+  network_manager.cpp
+  overlay_manager.cpp
+  relationship_manager.cpp
+  storage_manager.cpp
+  store_manager.cpp
+  types.cpp
+  user_manager.cpp
+  voice_manager.cpp
+  MMDDiscordRPC.cpp
+  dllmain.cpp
+     ライブラリ ..\build\MMDDiscordRPC.lib とオブジェクト ..\build\MMDDiscordRPC.exp を作成中
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 1697 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  MMDDiscordRPC.vcxproj -> D:\workspace\MMDDev\MMDDiscordRPC2\MMDPluginDLL-master\build\MMDDiscordRPC.dll

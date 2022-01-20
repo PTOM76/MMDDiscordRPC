@@ -17,6 +17,7 @@ using namespace mmp;
 
 HANDLE hModule;
 TCHAR iniPath[MAX_PATH + 1];
+TCHAR discordLibPath[MAX_PATH + 1];
 UINT DiscordRPCMenu = createWM_APP_ID();
 UINT SwitchMenu = createWM_APP_ID();
 UINT SettingMenu = createWM_APP_ID();
@@ -146,7 +147,7 @@ static LRESULT CALLBACK pluginWndProc(HWND hWnd, UINT msg, WPARAM wp,
 			break;
 		}
 		else if (menuId == (WORD)AboutMenu) {
-			MessageBox(hWnd, L"MMDDiscordRPC v0.5\nby Pitan",
+			MessageBox(hWnd, L"MMDDiscordRPC v1.0\nby Pitan",
 				L"MMDDiscordRPCについて", MB_OK);
 			break;
 		}
@@ -160,6 +161,7 @@ static LRESULT CALLBACK pluginWndProc(HWND hWnd, UINT msg, WPARAM wp,
 void MMDDiscordRPCInit() {
 	RPCEnable = true;
 	stateWindowTitleBool = true;
+
 	TCHAR dllPath[MAX_PATH + 1];
 	TCHAR pszDrive[_MAX_DRIVE];
 	TCHAR pszFolder[_MAX_DIR];
@@ -169,6 +171,10 @@ void MMDDiscordRPCInit() {
 	_tsplitpath_s(dllPath, pszDrive, _MAX_DRIVE, pszFolder, _MAX_DIR, pszFile,
 		_MAX_FNAME, pszExtent, _MAX_EXT);
 	_tmakepath_s(iniPath, MAX_PATH, pszDrive, pszFolder, L"config", L"ini");
+	// たまにライブラリ読み込まないバグの修正
+	_tmakepath_s(discordLibPath, MAX_PATH, pszDrive, pszFolder, L"lib\\discord_game_sdk", L"dll");
+	LoadLibrary(discordLibPath);
+
 	if (!PathFileExists(iniPath)) {
 		WritePrivateProfileString(L"settings", L"switch", L"enable", iniPath);
 		WritePrivateProfileString(L"settings", L"stateWindowTitle", L"true",
